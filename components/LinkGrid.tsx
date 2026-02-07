@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import * as Icons from 'lucide-react';
-import { LinkItem } from '../types';
+import type { LinkItem } from '../types';
 import { DEFAULT_LINKS } from '../constants';
-import { Plus, X, Trash2 } from 'lucide-react';
+import { Plus, X } from 'lucide-react';
 
-// Helper to render icon dynamically
 const DynamicIcon = ({ name, color, size = 24 }: { name: string; color: string; size?: number }) => {
   const IconComponent = (Icons as any)[name] || Icons.Link;
   return <IconComponent size={size} style={{ color }} />;
@@ -14,8 +13,6 @@ const LinkGrid: React.FC = () => {
   const [links, setLinks] = useState<LinkItem[]>(DEFAULT_LINKS);
   const [isEditing, setIsEditing] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  
-  // New link form state
   const [newTitle, setNewTitle] = useState('');
   const [newUrl, setNewUrl] = useState('');
 
@@ -42,12 +39,11 @@ const LinkGrid: React.FC = () => {
     e.preventDefault();
     if(!newTitle || !newUrl) return;
 
-    // Simple heuristic to guess icon, fallback to Link
     const newItem: LinkItem = {
       id: Date.now().toString(),
       title: newTitle,
       url: newUrl.startsWith('http') ? newUrl : `https://${newUrl}`,
-      icon: 'Globe', // Default icon
+      icon: 'Globe',
       color: '#ffffff'
     };
     
@@ -94,7 +90,6 @@ const LinkGrid: React.FC = () => {
           </div>
         ))}
 
-        {/* Add Button */}
         <button
           onClick={() => setShowModal(true)}
           className="flex flex-col items-center justify-center p-6 bg-glass border border-dashed border-glass-border rounded-xl hover:bg-glass-hover hover:border-white/30 transition-all duration-300 text-gray-500 hover:text-white"
@@ -104,7 +99,6 @@ const LinkGrid: React.FC = () => {
         </button>
       </div>
 
-      {/* Add Link Modal */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
           <div className="bg-[#1e293b] border border-gray-700 rounded-2xl p-6 w-full max-w-md shadow-2xl">
