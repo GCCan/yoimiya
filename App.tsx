@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import GeminiWidget from './components/GeminiWidget';
-import StatusWidget from './components/StatusWidget';
 
 const App: React.FC = () => {
   return (
@@ -22,7 +21,6 @@ const App: React.FC = () => {
       </main>
 
       {/* Persistent Widgets */}
-      <StatusWidget />
       <GeminiWidget />
       
       {/* Footer */}

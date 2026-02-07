@@ -1,4 +1,4 @@
-import { LinkItem, FeatureItem } from './types';
+import type { LinkItem, FeatureItem } from './types';
 
 export const NAV_LINKS = [
   { title: 'Home', href: '/' },
