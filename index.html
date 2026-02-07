@@ -4,68 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>XBoard Start</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind v4 CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              mono: ['JetBrains Mono', 'monospace'],
-            },
-            colors: {
-              brand: {
-                DEFAULT: '#2C6B74', /* Matching the Login Button */
-                dark: '#22535a',
-                light: '#e0f2f4',
-              },
-              glass: 'rgba(255, 255, 255, 0.7)',
-              'glass-border': 'rgba(0, 0, 0, 0.05)',
-              'glass-hover': 'rgba(0, 0, 0, 0.03)',
-            },
-            boxShadow: {
-              'glass': '0 4px 30px rgba(0, 0, 0, 0.05)',
-            }
-          }
-        }
+    <style type="text/css">
+      @theme {
+        --font-sans: "Inter", ui-sans-serif, system-ui;
+        --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular;
+        
+        /* Brand Colors */
+        --color-brand: #2C6B74;
+        --color-brand-dark: #1A4D55;
+        --color-brand-light: #5EEAD4;
+        
+        /* Glass Effect Variables - Logic moved to Tailwind classes for switching */
       }
-    </script>
-    <style>
+
       body {
-        background-color: #f1f5f9; /* slate-100 */
-        /* Subtle sky gradient mimicking the horizon in the photo */
-        background-image: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%);
-        color: #0f172a; /* slate-900 */
-        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #cbd5e1; 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8; 
-      }
+
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+      
+      .dark ::-webkit-scrollbar-track { background: #020617; }
+      .dark ::-webkit-scrollbar-thumb { background: #334155; }
+      .dark ::-webkit-scrollbar-thumb:hover { background: #475569; }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "lucide-react": "https://esm.sh/lucide-react@^0.475.0",
+        "react/": "https://esm.sh/react@^19.0.0/",
+        "react": "https://esm.sh/react@^19.0.0",
+        "react-dom/": "https://esm.sh/react-dom@^19.0.0/",
+        "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>

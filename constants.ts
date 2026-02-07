@@ -30,7 +30,6 @@ export const FEATURES: FeatureItem[] = [
   },
 ];
 
-// Not used in this version but kept for type compatibility if needed
 export const SEARCH_ENGINES = [
   { name: 'Google', url: 'https://www.google.com/search?q=' },
 ];
