@@ -2,9 +2,9 @@ import type { LinkItem, FeatureItem } from './types';
 
 export const NAV_LINKS = [
   { title: 'Home', href: '/' },
-  { title: 'Dashboard', href: '/dashboard' },
-  { title: 'Subscribe', href: '/dashboard/#/plan' },
-  { title: 'Knowledge', href: '/dashboard/#/knowledge' },
+  { title: 'Dashboard', href: 'https://ss.yoimiya.org' },
+  { title: 'Subscribe', href: 'https://ss.yoimiya.org/#/plan' },
+  { title: 'Knowledge', href: 'https://ss.yoimiya.org/#/knowledge' },
 ];
 
 export const FEATURES: FeatureItem[] = [

@@ -18,10 +18,10 @@ const SearchBar: React.FC = () => {
 
   const CurrentIcon = () => {
     switch (SEARCH_ENGINES[engineIndex].name) {
-        case 'Google': return <Chrome size={20} className="text-gray-400" />;
-        case 'Bing': return <Globe size={20} className="text-blue-400" />;
-        case 'DuckDuckGo': return <Shield size={20} className="text-orange-400" />;
-        default: return <Search size={20} className="text-gray-400" />;
+        case 'Google': return <Chrome size={20} className="text-slate-400 dark:text-slate-400" />;
+        case 'Bing': return <Globe size={20} className="text-blue-500 dark:text-blue-400" />;
+        case 'DuckDuckGo': return <Shield size={20} className="text-orange-500 dark:text-orange-400" />;
+        default: return <Search size={20} className="text-slate-400 dark:text-slate-400" />;
     }
   }
 
@@ -29,13 +29,13 @@ const SearchBar: React.FC = () => {
     <div className="w-full max-w-2xl mx-auto mb-10 relative z-20">
       <form onSubmit={handleSearch} className="relative group">
         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-          <Search className="h-5 w-5 text-gray-500 group-focus-within:text-blue-400 transition-colors" />
+          <Search className="h-5 w-5 text-slate-400 dark:text-slate-500 group-focus-within:text-brand dark:group-focus-within:text-brand-light transition-colors" />
         </div>
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="block w-full pl-12 pr-12 py-4 bg-glass backdrop-blur-md border border-glass-border rounded-2xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:bg-gray-900/40 transition-all shadow-lg"
+          className="block w-full pl-12 pr-12 py-4 bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand/50 dark:focus:ring-brand-light/50 focus:bg-white dark:focus:bg-slate-900/70 transition-all shadow-lg shadow-slate-200/50 dark:shadow-black/20"
           placeholder={`Search with ${SEARCH_ENGINES[engineIndex].name}...`}
           autoFocus
         />

@@ -25,11 +25,11 @@ const Clock: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center p-6 text-center select-none">
-      <h2 className="text-xl text-gray-400 font-light mb-2">{getGreeting()}, User</h2>
-      <h1 className="text-7xl md:text-9xl font-bold text-white tracking-tighter drop-shadow-2xl font-mono">
+      <h2 className="text-xl text-slate-500 dark:text-slate-400 font-light mb-2 transition-colors">{getGreeting()}, User</h2>
+      <h1 className="text-7xl md:text-9xl font-bold text-slate-900 dark:text-white tracking-tighter drop-shadow-sm dark:drop-shadow-2xl font-mono transition-colors">
         {formatTime(time)}
       </h1>
-      <p className="text-lg text-gray-400 mt-2 font-medium tracking-wide uppercase">
+      <p className="text-lg text-slate-500 dark:text-slate-400 mt-2 font-medium tracking-wide uppercase transition-colors">
         {formatDate(time)}
       </p>
     </div>

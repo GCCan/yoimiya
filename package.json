@@ -1,8 +1,23 @@
 {
-  "name": "xboard-start",
+  "name": "yoimiya",
+  "version": "0.0.1",
   "private": true,
-  "version": "0.0.0",
+  "description": "High-speed, secure global network acceleration service.",
+  "keywords": [
+    "yoimiya"
+  ],
+  "homepage": "https://github.com/GCCan/yoimiya#readme",
+  "bugs": {
+    "url": "https://github.com/GCCan/yoimiya/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GCCan/yoimiya.git"
+  },
+  "license": "MIT",
+  "author": "GCCan",
   "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

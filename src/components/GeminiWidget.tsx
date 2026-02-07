@@ -8,7 +8,7 @@ const GeminiWidget: React.FC = () => {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { id: '0', role: 'model', text: 'Hi! I\'m XBoard AI. How can I help you today?', timestamp: Date.now() }
+    { id: '0', role: 'model', text: 'Hi! I\'m Yoimiya AI. How can I help you today?', timestamp: Date.now() }
   ]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -67,7 +67,7 @@ const GeminiWidget: React.FC = () => {
       <div className="p-4 border-b border-slate-200 dark:border-white/5 flex justify-between items-center bg-slate-50 dark:bg-slate-900">
         <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-brand dark:text-brand-light" />
-            <span className="font-semibold text-sm text-slate-800 dark:text-slate-200">XBoard AI</span>
+            <span className="font-semibold text-sm text-slate-800 dark:text-slate-200">Yoimiya AI</span>
         </div>
         <button 
             onClick={() => setIsOpen(false)}
