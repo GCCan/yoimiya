@@ -31,14 +31,14 @@ const Hero: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 animate-fade-in-up delay-200">
             <a 
-              href="/register"
+              href="https://ss.yoimiya.org/#/register"
               className="w-full sm:w-auto px-8 py-4 bg-brand hover:bg-brand-dark text-white rounded-lg font-bold transition-all shadow-xl shadow-brand/20 dark:shadow-[0_0_20px_rgba(44,107,116,0.4)] flex items-center justify-center gap-2 group border border-transparent dark:hover:border-brand-light/50"
             >
               Get Started
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a 
-              href="/dashboard"
+              href="https://ss.yoimiya.org/#/login"
               className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 dark:bg-white/5 dark:hover:bg-white/10 dark:border-white/10 dark:text-slate-200 rounded-lg font-semibold transition-all backdrop-blur-sm flex items-center justify-center gap-2 shadow-sm dark:shadow-none"
             >
               Dashboard
@@ -72,10 +72,10 @@ const Hero: React.FC = () => {
                 {/* Node List */}
                 <div className="p-2">
                     {[
-                        { name: 'Tokyo Premium 01', ping: '32ms', load: 45, region: 'JP' },
-                        { name: 'Hong Kong CN2', ping: '18ms', load: 62, region: 'HK' },
-                        { name: 'Los Angeles GIA', ping: '145ms', load: 28, region: 'US' },
-                        { name: 'Singapore Direct', ping: '48ms', load: 35, region: 'SG' },
+                        { name: 'Tokyo ', ping: '32ms', load: 45, region: 'JP' },
+                        { name: 'Hong Kong', ping: '18ms', load: 62, region: 'HK' },
+                        { name: 'Los Angeles', ping: '145ms', load: 28, region: 'US' },
+                        { name: 'Singapore', ping: '48ms', load: 35, region: 'SG' },
                     ].map((node, i) => (
                         <div key={i} className="flex items-center justify-between p-3 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg transition-colors group cursor-default">
                             <div className="flex items-center gap-3">
@@ -100,8 +100,8 @@ const Hero: React.FC = () => {
                 {/* Speedtest Graphic */}
                 <div className="px-5 py-4 bg-white/50 dark:bg-slate-900/50 border-t border-slate-200/50 dark:border-white/5">
                     <div className="flex justify-between text-xs text-slate-600 dark:text-slate-400 mb-2 font-bold">
-                        <span>Current Speed</span>
-                        <span>850 Mbps</span>
+                        <span>Link Speed</span>
+                        <span>2000 Mbps</span>
                     </div>
                     <div className="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                         <div className="h-full bg-gradient-to-r from-brand to-brand-light w-[85%] rounded-full shadow-[0_0_10px_rgba(44,107,116,0.3)] dark:shadow-[0_0_15px_rgba(94,234,212,0.3)]"></div>

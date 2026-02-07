@@ -41,14 +41,14 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
           </button>
 
           <a 
-            href="/login" 
+            href="https://ss.yoimiya.org/#/login" 
             className="hidden md:flex items-center gap-2 px-5 py-2 text-sm font-semibold text-slate-700 hover:text-brand dark:text-slate-300 dark:hover:text-white transition-colors"
           >
             <LogIn size={16} />
             <span>Login</span>
           </a>
           <a 
-            href="/register" 
+            href="https://ss.yoimiya.org/#/register" 
             className="hidden md:flex items-center gap-2 px-6 py-2 bg-brand hover:bg-brand-dark dark:hover:bg-brand-light text-white rounded-lg transition-all text-sm font-bold shadow-lg shadow-brand/20 dark:shadow-[0_0_20px_rgba(44,107,116,0.3)] border border-transparent hover:border-brand-light/50"
           >
             <UserPlus size={16} />
