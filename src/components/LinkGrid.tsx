@@ -59,7 +59,7 @@ const LinkGrid: React.FC = () => {
         <h3 className="text-slate-500 dark:text-slate-400 text-sm font-semibold tracking-wider uppercase transition-colors">Quick Access</h3>
         <button 
           onClick={() => setIsEditing(!isEditing)}
-          className="text-xs text-slate-500 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors"
+          className="text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
         >
           {isEditing ? 'Done' : 'Edit'}
         </button>
@@ -92,7 +92,7 @@ const LinkGrid: React.FC = () => {
 
         <button
           onClick={() => setShowModal(true)}
-          className="flex flex-col items-center justify-center p-6 bg-white/80 dark:bg-slate-900/60 border border-dashed border-slate-300 dark:border-white/10 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/70 hover:border-brand dark:hover:border-white/30 transition-all duration-300 text-slate-400 dark:text-slate-500 hover:text-brand dark:hover:text-white"
+          className="flex flex-col items-center justify-center p-6 bg-white/80 dark:bg-slate-900/60 border border-dashed border-slate-300 dark:border-white/10 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/70 hover:border-brand dark:hover:border-white/30 transition-all duration-300 text-slate-400 dark:text-slate-400 hover:text-brand dark:hover:text-white"
         >
           <Plus size={32} strokeWidth={1.5} />
           <span className="text-sm mt-2 font-medium">Add Link</span>

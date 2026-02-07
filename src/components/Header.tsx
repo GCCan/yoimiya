@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
             <a 
               key={link.title} 
               href={link.href}
-              className="text-sm font-semibold text-slate-700 hover:text-brand dark:text-slate-400 dark:hover:text-brand-light transition-colors"
+              className="text-sm font-semibold text-slate-700 hover:text-brand dark:text-slate-300 dark:hover:text-brand-light transition-colors"
             >
               {link.title}
             </a>

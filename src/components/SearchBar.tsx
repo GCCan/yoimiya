@@ -29,7 +29,7 @@ const SearchBar: React.FC = () => {
     <div className="w-full max-w-2xl mx-auto mb-10 relative z-20">
       <form onSubmit={handleSearch} className="relative group">
         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-          <Search className="h-5 w-5 text-slate-400 dark:text-slate-500 group-focus-within:text-brand dark:group-focus-within:text-brand-light transition-colors" />
+          <Search className="h-5 w-5 text-slate-400 dark:text-slate-400 group-focus-within:text-brand dark:group-focus-within:text-brand-light transition-colors" />
         </div>
         <input
           type="text"

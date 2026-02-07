@@ -18,7 +18,7 @@ const StatusWidget: React.FC = () => {
   return (
     <div className="fixed bottom-6 left-6 hidden xl:block w-64 z-30">
         <div className="bg-white/90 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-xl p-4 shadow-xl shadow-slate-200/50 dark:shadow-black/30 transition-colors duration-300">
-            <h4 className="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest mb-4 flex items-center gap-2">
+            <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
                 <Activity size={14} className="text-emerald-500" /> System Status
             </h4>
             

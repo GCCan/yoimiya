@@ -63,8 +63,8 @@ const App: React.FC = () => {
       <GeminiWidget />
       
       <footer className="relative z-10 py-10 border-t border-slate-200 dark:border-white/5 bg-white/40 dark:bg-slate-900/40 backdrop-blur-md text-center transition-colors duration-300">
-        <p className="text-slate-500 dark:text-slate-500 text-sm">
-          &copy; {new Date().getFullYear()} Xboard. Open Source Project by <a href="https://github.com/cedar2025" className="text-brand hover:underline font-medium">cedar2025</a>.
+        <p className="text-slate-500 dark:text-slate-400 text-sm">
+          &copy; {new Date().getFullYear()} Yoimiya. Open Source Project by <a href="https://github.com/GCCan" className="text-brand dark:text-brand-light hover:underline font-medium">GCCan</a>.
         </p>
       </footer>
     </div>

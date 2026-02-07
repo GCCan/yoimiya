@@ -13,8 +13,8 @@ export default {
       colors: {
         brand: {
           DEFAULT: '#2C6B74',
-          dark: '#22535a',
-          light: '#e0f2f4',
+          dark: '#1A4D55',
+          light: '#5EEAD4',
         },
         glass: 'rgba(255, 255, 255, 0.7)',
         'glass-border': 'rgba(0, 0, 0, 0.05)',

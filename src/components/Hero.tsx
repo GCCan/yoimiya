@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             </span>
           </h1>
           
-          <p className="text-lg text-slate-700 dark:text-slate-400 mb-8 max-w-xl mx-auto md:mx-0 leading-relaxed animate-fade-in-up delay-100 transition-colors duration-300 font-medium dark:font-normal">
+          <p className="text-lg text-slate-700 dark:text-slate-300 mb-8 max-w-xl mx-auto md:mx-0 leading-relaxed animate-fade-in-up delay-100 transition-colors duration-300 font-medium dark:font-normal">
             Premium global network acceleration. Experience low latency gaming, 4K streaming, and secure browsing with Yoimiya.
           </p>
 
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
             </a>
           </div>
 
-          <div className="mt-10 flex items-center justify-center md:justify-start gap-6 text-sm text-slate-600 dark:text-slate-500 animate-fade-in-up delay-300 transition-colors duration-300 font-medium">
+          <div className="mt-10 flex items-center justify-center md:justify-start gap-6 text-sm text-slate-600 dark:text-slate-400 animate-fade-in-up delay-300 transition-colors duration-300 font-medium">
              <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-brand dark:text-brand-light" /> <span>99.9% Uptime</span>
              </div>
@@ -83,13 +83,13 @@ const Hero: React.FC = () => {
                                     {node.region}
                                 </div>
                                 <div>
-                                    <div className="text-sm text-slate-800 dark:text-slate-300 font-bold group-hover:text-brand dark:group-hover:text-brand-light transition-colors">{node.name}</div>
-                                    <div className="text-xs text-slate-500 dark:text-slate-500 font-medium">IEPL Optimized</div>
+                                    <div className="text-sm text-slate-800 dark:text-slate-200 font-bold group-hover:text-brand dark:group-hover:text-brand-light transition-colors">{node.name}</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">IEPL Optimized</div>
                                 </div>
                             </div>
                             <div className="text-right">
                                 <div className="text-sm font-mono text-emerald-700 dark:text-emerald-400 font-bold">{node.ping}</div>
-                                <div className="text-xs text-slate-500 dark:text-slate-600 flex items-center justify-end gap-1 font-medium">
+                                <div className="text-xs text-slate-500 dark:text-slate-400 flex items-center justify-end gap-1 font-medium">
                                     <Zap size={10} /> {node.load}% Load
                                 </div>
                             </div>
