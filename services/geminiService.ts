@@ -1,15 +1,17 @@
 import { GoogleGenAI } from "@google/genai";
 import { SYSTEM_INSTRUCTION } from '../constants';
 
-// Initialize the client
-// Ensure process.env.API_KEY is available in your environment
-const apiKey = process.env.API_KEY || '';
-const ai = new GoogleGenAI({ apiKey });
-
 export const generateResponse = async (prompt: string): Promise<string> => {
+  // The API key must be obtained exclusively from the environment variable process.env.API_KEY
+  const apiKey = process.env.API_KEY;
+
   if (!apiKey) {
-    return "Error: API Key is missing. Please configure process.env.API_KEY.";
+    console.error("API Key is missing. Please configure process.env.API_KEY.");
+    return "Error: API Key is missing. Please check your configuration.";
   }
+
+  // Initialize the client inside the function to prevent top-level initialization errors
+  const ai = new GoogleGenAI({ apiKey });
 
   try {
     const response = await ai.models.generateContent({
@@ -17,7 +19,8 @@ export const generateResponse = async (prompt: string): Promise<string> => {
       contents: prompt,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
-        thinkingConfig: { thinkingBudget: 0 }, // Speed over depth for a widget
+        // Disable thinking for faster response times in a chat widget
+        thinkingConfig: { thinkingBudget: 0 },
       },
     });
 
