@@ -1,5 +1,5 @@
-import React from 'react';
-import { LogIn, UserPlus, Menu, Sun, Moon } from 'lucide-react';
+import React, { useState } from 'react';
+import { LogIn, UserPlus, Menu, X, Sun, Moon } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
 
 interface HeaderProps {
@@ -8,6 +8,8 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-white/80 dark:bg-slate-950/70 backdrop-blur-xl border-b border-slate-200 dark:border-white/5 shadow-sm dark:shadow-black/5 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -54,9 +56,48 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
             <UserPlus size={16} />
             <span>Register</span>
           </a>
-          <button className="md:hidden p-2 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 rounded-lg transition-colors">
-            <Menu size={24} />
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 rounded-lg transition-colors"
+            aria-label="Toggle Menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="px-6 py-4 space-y-1 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-100 dark:border-white/5">
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.title}
+              href={link.href}
+              onClick={() => setIsMenuOpen(false)}
+              className="block px-4 py-3 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-brand dark:hover:text-brand-light hover:bg-slate-50 dark:hover:bg-white/5 rounded-lg transition-colors"
+            >
+              {link.title}
+            </a>
+          ))}
+          
+          <div className="pt-3 mt-3 border-t border-slate-100 dark:border-white/5 space-y-2">
+            <a
+              href="https://ss.yoimiya.org/#/login"
+              onClick={() => setIsMenuOpen(false)}
+              className="flex items-center gap-2 px-4 py-3 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-brand dark:hover:text-brand-light hover:bg-slate-50 dark:hover:bg-white/5 rounded-lg transition-colors"
+            >
+              <LogIn size={16} />
+              <span>Login</span>
+            </a>
+            <a
+              href="https://ss.yoimiya.org/#/register"
+              onClick={() => setIsMenuOpen(false)}
+              className="flex items-center justify-center gap-2 px-4 py-3 bg-brand hover:bg-brand-dark text-white rounded-lg text-sm font-bold transition-colors"
+            >
+              <UserPlus size={16} />
+              <span>Register</span>
+            </a>
+          </div>
         </div>
       </div>
     </header>
